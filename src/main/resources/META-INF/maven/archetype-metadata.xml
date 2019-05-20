@@ -22,6 +22,10 @@ under the License.
 <archetype-descriptor xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
   name="maven-archetype-icarus">
+  
+   <requiredProperties>
+    <requiredProperty key="unit"/>
+  </requiredProperties>
 
   <fileSets>
     <fileSet filtered="true" packaged="true">
@@ -35,9 +39,10 @@ under the License.
     </fileSet>
     <fileSet filtered="true" packaged="false" encoding="UTF-8">
       <directory/>
-      <includes>
-        <include>JenkinsFile</include>
-      </includes>
+	  <includes>
+		<include>JenkinsFile</include>
+		<include>docker/DockerFile</include>
+	  </includes>
     </fileSet>
   </fileSets>
 </archetype-descriptor>
